@@ -1,0 +1,39 @@
+.mat-dialog-title {
+  border-bottom: 1px solid #d3d3d3 ;
+  padding: 0 0 12px;
+  margin: 0;
+}
+
+.mat-tab-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.tab-content {
+  margin-top: 1.25em;
+}
+
+.field-long {
+  width: 80%;
+}
+
+.dialog-content {
+  height: 600px
+}
+
+.hostname {
+  width: 60%
+}
+
+.ip {
+  width: 60%
+}
+
+.key {
+  width: 30%
+}
+
+.value {
+  width: 50%
+}

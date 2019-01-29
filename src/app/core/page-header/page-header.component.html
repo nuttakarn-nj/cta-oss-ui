@@ -1,0 +1,16 @@
+<div>
+  <mat-toolbar class="cta-toolbar">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon class="md-24">menu</mat-icon>
+    </button>
+
+    <div class="page-header-toolbar">
+      <h1 class="page-header-title">{{title}}</h1>
+
+      <div>
+        <button mat-button class="button-toggleTheme" (click)="toggleTheme()">{{dark ? 'Light' : 'Dark'}} Theme</button>
+      </div>
+    </div>
+
+  </mat-toolbar>
+</div>

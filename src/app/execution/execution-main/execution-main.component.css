@@ -1,0 +1,76 @@
+/* Main table */
+.testSuiteTable {
+  color: white;
+  background-color: #4D4D4D;
+  height: 30px !important; 
+}
+.testSuiteTable-testSuite {
+  width: 20%;
+  font-size: 12px;
+}
+.testSuiteTable-configuration {
+  width: 20%;
+  font-size: 12px;
+}
+.testSuiteTable-stared {
+  width: 12%;
+  font-size: 12px;
+}
+.testSuiteTable-duration {
+  width: 10%;
+  font-size: 12px;
+}
+.testSuiteTable-status{
+  width: 10%;
+  font-size: 12px;
+}
+.testSuiteTable-result {
+  width: 10%;
+  font-size: 12px;
+}
+.testSuiteTable-action {
+  width: 10%;
+  font-size: 12px;
+}
+
+#testSuiteTable-result-ok {
+  background-color: green;
+  width: 35px;
+  text-align: center;
+  float: left;
+}
+#testSuiteTable-result-failed {
+  background-color: red;
+  width: 35px;
+  text-align: center;
+  float: left;
+}
+#testSuiteTable-result-partial {
+  background-color: orange;
+  width: 35px;
+  text-align: center;
+  float: left;
+}
+#testSuiteTable-result-inconclusive {
+  background-color: #AFAFAF;
+  width: 35px;
+  text-align: center;
+  float: left;
+}
+
+.mat-expansion-panel-header {
+  height: 30px !important; 
+}
+
+.mat-expansion-panel {
+  background-color: #FFFFFF;
+  color: rgba(0,0,0,.87);
+}
+
+.execution-toolbar {
+  background-color: #666666;
+  color: white;
+  margin-bottom: 20px;
+}
+
+

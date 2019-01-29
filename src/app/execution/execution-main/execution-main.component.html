@@ -1,0 +1,45 @@
+<mat-toolbar class="execution-toolbar mat-elevation-z5">
+  EXECUTIONS
+</mat-toolbar>
+
+  <!-- testSuite table -->
+  <mat-expansion-panel [disabled]="true">
+    <mat-expansion-panel-header class="testSuiteTable">
+
+      <mat-panel-title class="testSuiteTable-testSuite">
+        TEST SUITE
+      </mat-panel-title>
+
+      <mat-panel-title class="testSuiteTable-configuration">
+        CONFIGURATION
+      </mat-panel-title>
+
+      <mat-panel-title class="testSuiteTable-stared">
+        STARTED
+      </mat-panel-title>
+
+      <mat-panel-title class="testSuiteTable-duration">
+        DURATION
+      </mat-panel-title>
+
+      <mat-panel-title class="testSuiteTable-status">
+        STATUS
+      </mat-panel-title>
+
+      <mat-panel-title class="testSuiteTable-result">
+        <div id="testSuiteTable-result-ok">O</div>
+        <div id="testSuiteTable-result-failed">F</div>
+        <div id="testSuiteTable-result-partial">P</div>
+        <div id="testSuiteTable-result-inconclusive">I</div>
+      </mat-panel-title>
+
+      <mat-panel-title class="testSuiteTable-action">
+        ACTIONS
+      </mat-panel-title>
+
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+
+  <div *ngFor="let execution of executions">
+    <cta-execution-test-suite-content [execution]="execution"></cta-execution-test-suite-content>
+  </div>

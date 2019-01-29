@@ -1,0 +1,38 @@
+<mat-expansion-panel hideToggle="true">
+
+  <!-- content of test table -->
+  <mat-expansion-panel-header (click)="getResultsByTestId(stage)" class="testTable-content">
+    <mat-panel-title class="testTable-test">
+      {{stage.testId}}
+    </mat-panel-title>
+
+  </mat-expansion-panel-header>
+
+  <!-- stage table -->
+  <mat-expansion-panel [disabled]="true">
+    <mat-expansion-panel-header class="stageTable">
+
+      <mat-panel-title class="stageTable-stage">
+        STAGE
+      </mat-panel-title>
+
+      <mat-panel-title class="stageTable-description">
+        DESCRIPTION
+      </mat-panel-title>
+
+      <mat-panel-title class="stageTable-start">
+        STARTED
+      </mat-panel-title>
+
+      <mat-panel-title class="stageTable-status">
+        STATUS
+      </mat-panel-title>
+
+    </mat-expansion-panel-header>
+
+  </mat-expansion-panel>
+
+  <!-- content of stage table -->
+  <cta-execution-stage-content *ngFor="let result of results" [result]="result"></cta-execution-stage-content>
+
+</mat-expansion-panel>

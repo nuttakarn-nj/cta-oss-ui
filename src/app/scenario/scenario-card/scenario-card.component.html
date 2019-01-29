@@ -1,0 +1,50 @@
+<mat-card class="scenario-card mat-elevation-z4">
+
+  <div class="card-content-wrapper ">
+    <mat-card-header>
+      <mat-card-title>
+        <div matTooltip="{{scenario.name}}">
+          {{truncated(scenario.name)}}
+        </div>
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <p class="content-value">Configuration:</p>
+      <p class="content-value">{{scenario.configuration.name || '-'}}</p>
+    </mat-card-content>
+  </div>
+
+  <mat-card-actions>
+
+    <div class="action-footer">
+      <mat-grid-list cols="4">
+        <mat-grid-tile>
+          <button mat-icon-button matTooltip="Schedule" (click)="schedule(scenario)">
+            <mat-icon [class.scheduled]="scenario.scheduled === true">schedule</mat-icon>
+          </button>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <button mat-icon-button matTooltip="Edit" (click)="openDialogForEdit(scenario)">
+            <mat-icon>mode_edit</mat-icon>
+          </button>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <button mat-icon-button matTooltip="Run" (click)="run(scenario)">
+            <mat-icon>play_circle_outline</mat-icon>
+          </button>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <button mat-icon-button matTooltip="Delete" (click)="delete(scenario)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+
+  </mat-card-actions>
+
+</mat-card>

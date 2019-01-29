@@ -1,0 +1,19 @@
+<div style="overflow: auto">
+  <div>
+    <mat-form-field class="field-long">
+      <input matInput placeholder="Test suite name" [(ngModel)]="testSuite.name">
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field class="field-long">
+      <input matInput placeholder="Test name" [(ngModel)]="testSuite.tests[0].name">
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field class="field-long">
+      <textarea matInput placeholder="Run Script" [(ngModel)]="testSuite.tests[0].stages[0].run"></textarea>
+    </mat-form-field>
+  </div>
+</div>

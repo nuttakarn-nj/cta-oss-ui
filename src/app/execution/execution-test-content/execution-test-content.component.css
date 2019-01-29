@@ -1,0 +1,105 @@
+/* test table */
+.testTable-content {
+  background-color: rgba(0, 102, 255, 0.08) !important;
+}
+.testTable-test {
+  width: 20%;
+  font-size: 12px;
+}
+.testTable-message {
+  width: 25%;
+  font-size: 12px;
+}
+.testTable-description {
+  width: 20%;
+  font-size: 12px;
+}
+.testTable-started {
+  width: 10%;
+  font-size: 12px;
+}
+.testTable-duration {
+  width: 10%;
+  font-size: 12px;
+}
+.testTable-status {
+  width: 5%;
+  font-size: 12px;
+}
+.testTable-action {
+  width: 10%;
+  font-size: 12px;
+}
+
+/* stage table */
+.stageTable {
+  color: white;
+  background-color: #FFA100;
+  width: 85%;
+  height: 30px !important; 
+}
+.stageTable-content{
+  width: 85%;
+  font-size: 12px;
+  background-color: rgba(0, 102, 255, 0.08) !important;
+}
+.stageTable-stage {
+  width: 20%;
+  font-size: 12px;
+}
+.stageTable-description {
+  width: 20%;
+  font-size: 12px;
+}
+.stageTable-start {
+  width: 15%;
+  font-size: 12px;
+}
+.stageTable-duration {
+  width: 15%;
+  font-size: 12px;
+}
+.stageTable-status {
+  width: 15%;
+  font-size: 12px;
+}
+.stageTable-action {
+  width: 15%;
+  font-size: 12px;
+}
+
+.mat-expansion-panel-header {
+  min-height: 30px !important; 
+}
+
+.mat-chip {
+  font-size: 12px;
+  color: white;
+  line-height: 5px;
+}
+
+.green {
+  background-color: green;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.blue {
+  background-color: #1c4be0;
+}
+
+.grey {
+  background-color: grey;
+}
+
+.red {
+  background-color: red;
+}
+
+.mat-expansion-panel {
+  background-color: #D0D0D0;
+  color: rgba(0,0,0,.87);
+}
+

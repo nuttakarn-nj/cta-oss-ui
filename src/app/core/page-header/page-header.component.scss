@@ -1,0 +1,42 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mat-sidenav {
+  min-width: 15vw;
+
+  .mat-button {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin: 24px 0;
+  }
+}
+
+.mat-toolbar {
+  .mat-icon {
+    cursor: pointer;
+  }
+
+  .page-header-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.demo-content {
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+.cta-toolbar {
+  background: #FF8000;
+  color: white;
+}

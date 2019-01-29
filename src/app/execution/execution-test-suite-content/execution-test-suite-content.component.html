@@ -1,0 +1,72 @@
+<mat-expansion-panel hideToggle="true">
+
+  <!-- content of testSuite table -->
+  <mat-expansion-panel-header (click)=" getDistinctTestId()">
+    <mat-panel-title class="mainTable-testSuite">
+      {{execution.scenarioData.testSuite.name}}
+    </mat-panel-title>
+
+    <mat-panel-title class="mainTable-configuration">
+      {{execution.scenarioData.configuration.name}}
+    </mat-panel-title>
+
+    <mat-panel-title class="mainTable-stared">
+      {{convertTimestampToUTC(execution.requestTimestamp)}}
+    </mat-panel-title>
+
+    <mat-panel-title class="mainTable-duration">
+      {{duration(execution.completeTimestamp - execution.requestTimestamp)}}
+    </mat-panel-title>
+
+    <mat-panel-title class="mainTable-status">
+      <mat-chip-list>
+        <mat-chip disabled="true" [ngClass]="{'green': execution.state === 'finished', 'orange': execution.state === 'pending', 'blue': execution.state === 'running', 'grey': execution.state === 'canceled', 'red': execution.state === 'failed' }">
+          {{execution.state}}
+        </mat-chip>
+      </mat-chip-list>
+    </mat-panel-title>
+
+    <mat-panel-title class="mainTable-result">
+      <div id="mainTable-content-result-ok" matTooltip="ok">{{execution.ok}}</div>
+      <div id="mainTable-content-result-failed" matTooltip="failed">{{execution.failed}}</div>
+      <div id="mainTable-content-result-partial" matTooltip="partial">{{execution.partial}}</div>
+      <div id="mainTable-content-result-inconclusive" matTooltip="inconclusive">{{execution.inconclusive}}</div>
+    </mat-panel-title>
+
+    <mat-panel-title class="mainTable-action">
+      <a target="_blank" [routerLink]="['/executions', execution.id]" routerLinkActive="active">
+        <mat-icon matTooltip="Share">shared</mat-icon>
+      </a>
+    </mat-panel-title>
+
+  </mat-expansion-panel-header>
+
+  <!-- Hostname table-->
+  <mat-expansion-panel [disabled]="true">
+    <mat-expansion-panel-header class="hostnameTable">
+
+      <mat-panel-title class="hostnameTable-header">
+        HOSTNAME
+      </mat-panel-title>
+
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+
+  <!--content of hostname table-->
+  <cta-execution-hostname-content *ngFor="let instance of execution.instances" [instance]="instance"></cta-execution-hostname-content>
+
+  <!-- test table-->
+  <mat-expansion-panel [disabled]="true">
+    <mat-expansion-panel-header class="testTable">
+
+      <mat-panel-title class="testTable-test">
+        TEST
+      </mat-panel-title>
+
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+
+  <!-- content of test table-->
+  <cta-execution-test-content *ngFor="let stage of stages" [stage]="stage"></cta-execution-test-content>
+
+</mat-expansion-panel>

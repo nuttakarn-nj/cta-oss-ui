@@ -1,0 +1,27 @@
+image: node:carbon-alpine
+
+stages:
+  - test
+
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  - env
+  - npm config set proxy http://webproxy.pln.corp.services:80
+  - npm config set https-proxy http://webproxy.pln.corp.services:80
+  - npm install
+
+
+#unit_test:
+#  stage: test
+#  script:
+#    - npm run test:ci
+
+lint:
+  stage: test
+  script:
+    - npm run lint
+
+

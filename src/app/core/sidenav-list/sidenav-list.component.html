@@ -1,0 +1,11 @@
+<mat-nav-list>
+  <mat-list-item *ngFor="let link of links" [routerLink]="link.path" routerLinkActive="active">
+    <a *ngIf="sidenav._opened" matLine >{{ link.name }}</a>
+    <button mat-icon-button>
+      <mat-icon class="md-24">{{ link.icon }}</mat-icon>
+    </button>
+  </mat-list-item>
+  <mat-list-item [attr.align]="'right'" (click)="sidenav.toggle()">
+    <mat-icon>{{sidenav._opened ? arrowLeft : arrowRight}}</mat-icon>
+  </mat-list-item>
+</mat-nav-list>

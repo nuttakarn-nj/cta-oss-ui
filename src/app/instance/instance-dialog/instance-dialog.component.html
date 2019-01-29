@@ -1,0 +1,71 @@
+<form>
+  <div class="dialog-header">
+    <h1 mat-dialog-title>Instance</h1>
+  </div>
+
+  <mat-dialog-content class="dialog-content">
+
+    <mat-tab-group>
+
+      <mat-tab label="Instance detail">
+        <div class="tab-content">
+
+          <div>
+            <mat-form-field class="hostname">
+              <input matInput placeholder="Hostname" name="hostname" value="{{instance.hostname}}" readonly="true">
+            </mat-form-field>
+          </div>
+
+          <div>
+            <mat-form-field class="ip">
+              <input matInput placeholder="IP" name="ip" value="{{instance.ip}}" readonly="true">
+            </mat-form-field>
+          </div>
+
+          <div>
+            <b>Properties:</b>
+          </div>
+
+          <div>
+            <mat-form-field class="key">
+              <input matInput placeholder="New Key" name="addingKey" [ngModelOptions]="{standalone:true}" [(ngModel)]="addingProp.key">
+            </mat-form-field> :
+
+            <mat-form-field class="value">
+              <input matInput placeholder="New Value" name="addingVal" [ngModelOptions]="{standalone:true}" [(ngModel)]="addingProp.value">
+            </mat-form-field>
+
+            <button mat-icon-button matTooltip="add properties" (click)="addProps()">
+              <mat-icon>add_circle</mat-icon>
+            </button>
+          </div>
+
+          <div *ngFor="let prop of props">
+            <mat-form-field class="key">
+              <input matInput [ngModelOptions]="{standalone:true}" [(ngModel)]="prop.key" name="propKey" required>
+            </mat-form-field> :
+
+            <mat-form-field class="value">
+              <input matInput [ngModelOptions]="{standalone:true}" [(ngModel)]="prop.value" name="propValue" required>
+            </mat-form-field>
+
+
+            <button mat-icon-button matTooltip="delete properties">
+              <mat-icon (click)="delete(prop)">delete</mat-icon>
+            </button>
+          </div>
+
+        </div>
+      </mat-tab>
+
+    </mat-tab-group>
+
+  </mat-dialog-content>
+
+  <mat-dialog-actions [attr.align]="'end'">
+    <button mat-button type="submit" (click)="onSave()">Save</button>
+    <button mat-button (click)="onReset()">Reset</button>
+    <button mat-button (click)="onClose()">Close</button>
+  </mat-dialog-actions>
+
+</form>

@@ -1,0 +1,43 @@
+.card-content-wrapper {
+  height: 140px;
+}
+
+.scenario-card {
+  width: 14%;
+  min-width: 160px;
+  height: 200px;
+  min-height: 200px;
+  margin-left: 20px;
+  margin-top: 20px;
+  float: left;
+}
+
+.mat-card-header .mat-card-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #0099C4;
+}
+
+.mat-card-content .content-title {
+  color: #666;
+  font-size: 12px;
+  margin: 0;
+}
+
+.mat-card-content .content-value {
+  font-size: 12px;
+  display: inline-block
+}
+
+.action-footer {
+  margin-top: 15px;
+  border-top: 1px solid #d3d3d3;
+}
+
+mat-card:hover {
+  background-color: #e6e5ef;
+}
+
+.mat-card {
+  padding: 15px;
+}

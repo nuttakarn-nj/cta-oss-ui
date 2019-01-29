@@ -1,0 +1,34 @@
+<div class="properties-wrapper">
+  <div>
+    <b>Properties (counts: {{editableProps.length}}) :</b>
+
+    <div class="adding-props-wrapper">
+      <mat-form-field class="key">
+        <input matInput placeholder="New Key" name="addingKey" [ngModelOptions]="{standalone:true}" [(ngModel)]="addingProp.key">
+      </mat-form-field> :
+
+      <mat-form-field class="value">
+        <input matInput placeholder="New Value" name="addingVal" [ngModelOptions]="{standalone:true}" [(ngModel)]="addingProp.value">
+      </mat-form-field>
+
+      <button mat-icon-button matTooltip="add properties" (click)="add()">
+        <mat-icon>add_circle</mat-icon>
+      </button>
+    </div>
+
+    <div *ngFor="let prop of editableProps">
+      <mat-form-field class="key">
+        <input matInput [ngModelOptions]="{standalone:true}" [(ngModel)]="prop.key" name="propKey">
+      </mat-form-field> :
+
+      <mat-form-field class="value">
+        <input matInput [ngModelOptions]="{standalone:true}" [(ngModel)]="prop.value" name="propValue">
+      </mat-form-field>
+
+      <button mat-icon-button matTooltip="delete properties" (click)="delete(prop)">
+        <mat-icon>delete</mat-icon>
+      </button>
+
+    </div>
+  </div>
+</div>

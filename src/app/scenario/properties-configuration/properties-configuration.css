@@ -1,0 +1,16 @@
+.properties-wrapper {
+  overflow: auto;
+  min-width: 300px;
+}
+
+.configProp-field {
+  width: 30%;
+}
+
+.key {
+  width: 30%
+}
+
+.value {
+  width: 50%
+}

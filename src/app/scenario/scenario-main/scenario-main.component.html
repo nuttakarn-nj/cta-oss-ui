@@ -1,0 +1,24 @@
+<mat-toolbar class="scenario-toolbar mat-elevation-z5">
+  SCENARIOS
+</mat-toolbar>
+
+<div class="scenario-container">
+  <mat-card class="scenario-card mat-elevation-z4">
+    <mat-card-header>
+    </mat-card-header>
+
+    <mat-card-content class="scenario-content">
+      <div>
+        <button mat-icon-button matTooltip="Create a scenario" (click)="openDialogForCreate()">
+          <mat-icon>add_circle_outline</mat-icon>
+        </button>
+      </div>
+      <div>Create a scenario</div>
+    </mat-card-content>
+
+    <mat-card-actions>
+    </mat-card-actions>
+  </mat-card>
+
+  <cta-scenario-card *ngFor="let scenario of scenarios" [scenario]="scenario" (onDeleted)="onDeleted($event)"></cta-scenario-card>
+</div>

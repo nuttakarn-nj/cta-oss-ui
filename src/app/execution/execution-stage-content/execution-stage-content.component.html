@@ -1,0 +1,26 @@
+<mat-expansion-panel hideToggle="true" disabled="true">
+  <mat-expansion-panel-header class="stageTable-content">
+
+    <mat-panel-title class="stageTable-stage">
+      {{result.index}}
+    </mat-panel-title>
+
+    <mat-panel-title class="stageTable-description">
+      {{result.description}}
+    </mat-panel-title>
+
+    <mat-panel-title class="stageTable-start">
+      {{convertTimestampToUTC(result.timestamp)}}
+    </mat-panel-title>
+
+    <mat-panel-title class="stageTable-status">
+      <mat-chip-list>
+        <mat-chip disabled="true" [ngClass]="{'green': result.status === 'ok', 'orange': result.status === 'partial', 'grey': result.status === 'inconclusive', 'red': result.status === 'failed' }">
+          {{result.status}}
+        </mat-chip>
+      </mat-chip-list>
+
+    </mat-panel-title>
+
+  </mat-expansion-panel-header>
+</mat-expansion-panel>

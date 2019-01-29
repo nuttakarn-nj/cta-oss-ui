@@ -1,0 +1,21 @@
+/* Hostname table */
+.hostnameTable-header {
+  width: 33%;
+  font-size: 12px;
+  color: black !important;
+}
+.hostnameTable-content {
+  width: 20%;
+  font-size: 12px;
+  background-color: rgba(96, 103, 123, 0.32) !important;
+}
+
+.mat-expansion-panel {
+  background: #FFFFFF;
+  color: rgba(0,0,0,.87);
+}
+
+.mat-expansion-panel-header {
+  height: 30px !important; 
+}
+

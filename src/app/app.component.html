@@ -1,0 +1,16 @@
+<mat-sidenav-container fullscreen>
+
+  <mat-sidenav #sidenav mode="side"
+               opened="true"
+               disableClose
+               [ngClass]="{'mat-sidenav-closed': !sidenav._opened}"
+  >
+    <cta-sidenav-list [sidenav]="sidenav"></cta-sidenav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="app-content">
+    <cta-page-header [sidenav]="sidenav" [title]="title"></cta-page-header>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
